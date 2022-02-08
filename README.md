@@ -118,29 +118,55 @@
     - then add `net.ipv4.tcp_timestamps=0` to `/etc/sysctl.conf`
   
 
-- If `/proc/sys/net/ipv4/conf/all/accept_source_route` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/accept_source_route` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/accept_source_route` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.all.accept_source_route=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/conf/all/accept_source_route`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.all.accept_source_route=0` to `/etc/sysctl.conf`
 
-- If `/proc/sys/net/ipv4/conf/all/forwarding` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.forwarding` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/forwarding` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.forwarding` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/forwarding` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.all.forwarding=0` to `/etc/sysctl.conf`
 
-- If `/proc/sys/net/ipv4/conf/all/accept_redirects` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.accept_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/accept_redirects` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.accept_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/accept_redirects` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.all.accept_redirects=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/conf/all/forwarding`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.all.forwarding` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.all.forwarding` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.all.forwarding=0` to `/etc/sysctl.conf`
+  
+  
+- If `/proc/sys/net/ipv4/conf/all/accept_redirects`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.all.accept_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.all.accept_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.all.accept_redirects=0` to `/etc/sysctl.conf`
 
-- If `/proc/sys/net/ipv4/conf/all/secure_redirects` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.secure_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/secure_redirects` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.secure_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/secure_redirects` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.all.secure_redirects=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/conf/all/secure_redirects`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.all.secure_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.all.secure_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.all.secure_redirects=0` to `/etc/sysctl.conf`
 
-- If `/proc/sys/net/ipv4/conf/all/send_redirects` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.send_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/send_redirects` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.send_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/all/send_redirects` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.all.send_redirects=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/conf/all/send_redirects`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.all.send_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.all.send_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.all.send_redirects=0` to `/etc/sysctl.conf`
 
-- If `/proc/sys/net/ipv4/conf/default/send_redirects` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.default.send_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/default/send_redirects` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.default.send_redirects` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/conf/default/send_redirects` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.conf.default.send_redirects=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/conf/default/send_redirects`
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.conf.default.send_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.conf.default.send_redirects` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.conf.default.send_redirects=0` to `/etc/sysctl.conf`
 
 - Set VM Swappiness Globally (`"echo 'vm.swappiness=10' >> /etc/sysctl.conf"`), but not if `vm.swapiness` is already defined.
 
