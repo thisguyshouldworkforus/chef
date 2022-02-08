@@ -109,9 +109,14 @@
 - This reciepe will:
   - Remove IPv6 and Multicast Forwarding Entries (`"sed -ri '/ipv6|mc_forwarding/d' /etc/sysctl.conf"`)
   
-- If `/proc/sys/net/ipv4/tcp_timestamps` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.tcp_timestamps` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/tcp_timestamps` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.tcp_timestamps` from `/etc/sysctl.conf`
-- If `/proc/sys/net/ipv4/tcp_timestamps` **DOES** exist, and **IS WRITABLE** then add `net.ipv4.tcp_timestamps=0` to `/etc/sysctl.conf`
+- If `/proc/sys/net/ipv4/tcp_timestamps`:
+  - **DOES NOT** exist, or **IS NOT WRITABLE**
+    - then remove `net.ipv4.tcp_timestamps` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then remove `net.ipv4.tcp_timestamps` from `/etc/sysctl.conf`
+  - **DOES** exist, and **IS WRITABLE**
+    - then add `net.ipv4.tcp_timestamps=0` to `/etc/sysctl.conf`
+  
 
 - If `/proc/sys/net/ipv4/conf/all/accept_source_route` **DOES NOT** exist, or **IS NOT WRITABLE** then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
 - If `/proc/sys/net/ipv4/conf/all/accept_source_route` **DOES** exist, and **IS WRITABLE** then remove `net.ipv4.conf.all.accept_source_route` from `/etc/sysctl.conf`
