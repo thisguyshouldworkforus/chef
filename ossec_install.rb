@@ -26,8 +26,8 @@ end
 
 case node['platform']
 when 'centos'
-  yum_repository 'EWS-3rd-party-repo' do
-    description 'EWS 3rd party rpms'
+  yum_repository '3rd-party-repo' do
+    description '3rd party rpms'
     baseurl 'https://sba.tc/artifactory/third-party-rpms/el/$releasever/$basearch/'
     gpgcheck false
     sslverify false
@@ -59,7 +59,7 @@ execute 'change_group' do
   only_if 'rpm -qa | grep ossec-hids-server'
 end
 
-if File.exist?('/etc/chef/client.rb') && !File.readlines('/etc/chef/client.rb').grep(/chef12corp/).empty?
+if File.exist?('/etc/chef/client.rb') && !File.readlines('/etc/chef/client.rb').grep(/corp-chef/).empty?
   cookbook_file '/var/ossec/etc/ossec-server.conf' do
     source 'ossec.conf'
     mode '644'
@@ -67,7 +67,7 @@ if File.exist?('/etc/chef/client.rb') && !File.readlines('/etc/chef/client.rb').
     group 'root'
     only_if 'rpm -qa | grep ossec-hids-server'
   end
-elsif File.exist?('/etc/chef/client.rb') && !File.readlines('/etc/chef/client.rb').grep(/chef12prod/).empty?
+elsif File.exist?('/etc/chef/client.rb') && !File.readlines('/etc/chef/client.rb').grep(/prod-chef/).empty?
   cookbook_file '/var/ossec/etc/ossec-server.conf' do
     source 'ossec.conf.prod'
     mode '644'
